@@ -1,7 +1,8 @@
 import jsonServer from "json-server";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-
+// in dev mode use npm run dev to run jsonServer and vite redirect /api/customers, /api/transactions to jsonServer
+// in production use vercel route to redirect /api/customers, /api/transactions to jsonServer
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

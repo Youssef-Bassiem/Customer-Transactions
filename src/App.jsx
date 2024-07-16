@@ -15,9 +15,8 @@ function App() {
 
   useEffect(() => {
     function fetchApi(url) {
-      const controller = new AbortController();
       setisLoading(true);
-      fetch(`${Base_Url}api/${url}`, { signal: controller.signal })
+      fetch(`${Base_Url}api/${url}`)
         .then((res) => res.json())
         .then((data) => {
           url === "customers" ? setCustomers(data) : setTransactions(data);
